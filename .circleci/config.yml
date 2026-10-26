@@ -1,0 +1,9 @@
+version: '2.1'
+orbs:
+  cypress: cypress-io/cypress@6.1.0
+workflows:
+  use-my-orb:
+    jobs:
+      - cypress/run:
+          install-browsers: true
+          cypress-command: npx cypress run --e2e --browser chrome
